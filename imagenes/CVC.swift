@@ -38,8 +38,10 @@ class CVC: UICollectionViewController {
                 let img_urls = dico2["m"] as! String
                 let img_url = NSURL(string: img_urls)
                 let img_datos = NSData(contentsOfURL: img_url!)
-                if let imagen = UIImage(data: img_datos!) {
-                    imgs.append(imagen)
+                if (img_datos != nil) {
+                    if let imagen = UIImage(data: img_datos!) {
+                        imgs.append(imagen)
+                    }
                 }
             }
         }
@@ -54,6 +56,8 @@ class CVC: UICollectionViewController {
         let seccion = Seccion(nombre: sender.text!, imagenes: busquedaGoogle(sender.text!))
         imagenes.append(seccion)
         self.collectionView!.reloadData()
+        sender.text = nil
+        sender.resignFirstResponder()
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -102,6 +106,14 @@ class CVC: UICollectionViewController {
     
         // Configure the cell
     
+        return cell
+    }
+    
+    override func collectionView(collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, atIndexPath indexPath: NSIndexPath) -> UICollectionReusableView {
+        let cell = collectionView.dequeueReusableSupplementaryViewOfKind(kind, withReuseIdentifier: "Cell2", forIndexPath: indexPath) as! EncabezadoVista
+        
+        cell.etiqueta.text = imagenes[indexPath.section].nombre
+        
         return cell
     }
 

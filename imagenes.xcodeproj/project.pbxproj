@@ -15,6 +15,7 @@
 		C475F4421D5B1E5800BB8750 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C475F4401D5B1E5800BB8750 /* LaunchScreen.storyboard */; };
 		C475F44A1D5B1F2000BB8750 /* CVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C475F4491D5B1F2000BB8750 /* CVC.swift */; };
 		C4F71FB01D5B313600ECDDAE /* ImgCelda.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F71FAF1D5B313600ECDDAE /* ImgCelda.swift */; };
+		C4F71FB21D5B352100ECDDAE /* EncabezadoVista.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F71FB11D5B352100ECDDAE /* EncabezadoVista.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		C475F4431D5B1E5800BB8750 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C475F4491D5B1F2000BB8750 /* CVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CVC.swift; sourceTree = "<group>"; };
 		C4F71FAF1D5B313600ECDDAE /* ImgCelda.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImgCelda.swift; sourceTree = "<group>"; };
+		C4F71FB11D5B352100ECDDAE /* EncabezadoVista.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EncabezadoVista.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				C475F43B1D5B1E5800BB8750 /* imagenes.xcdatamodeld */,
 				C475F4491D5B1F2000BB8750 /* CVC.swift */,
 				C4F71FAF1D5B313600ECDDAE /* ImgCelda.swift */,
+				C4F71FB11D5B352100ECDDAE /* EncabezadoVista.swift */,
 			);
 			path = imagenes;
 			sourceTree = "<group>";
@@ -146,6 +149,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C475F44A1D5B1F2000BB8750 /* CVC.swift in Sources */,
+				C4F71FB21D5B352100ECDDAE /* EncabezadoVista.swift in Sources */,
 				C475F4371D5B1E5800BB8750 /* ViewController.swift in Sources */,
 				C4F71FB01D5B313600ECDDAE /* ImgCelda.swift in Sources */,
 				C475F4351D5B1E5800BB8750 /* AppDelegate.swift in Sources */,

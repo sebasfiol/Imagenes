@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -32,13 +33,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="diI-wH-6aQ">
                             <size key="itemSize" width="200" height="200"/>
-                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="headerReferenceSize" width="50" height="50"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="N0V-7C-qlH" customClass="ImgCelda" customModule="imagenes" customModuleProvider="target">
-                                <rect key="frame" x="60" y="64" width="200" height="200"/>
+                                <rect key="frame" x="60" y="114" width="200" height="200"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
@@ -55,6 +56,28 @@
                                 </connections>
                             </collectionViewCell>
                         </cells>
+                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell2" id="R2k-Gz-7jI" customClass="EncabezadoVista" customModule="imagenes" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="64" width="320" height="50"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UKZ-yx-B72">
+                                    <rect key="frame" x="78" y="14" width="164" height="21"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="UKZ-yx-B72" secondAttribute="height" multiplier="164:21" id="d9Y-oT-6vV"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="UKZ-yx-B72" firstAttribute="centerY" secondItem="R2k-Gz-7jI" secondAttribute="centerY" id="7TA-ZL-rUi"/>
+                                <constraint firstItem="UKZ-yx-B72" firstAttribute="centerX" secondItem="R2k-Gz-7jI" secondAttribute="centerX" id="MkU-M3-FzG"/>
+                            </constraints>
+                            <connections>
+                                <outlet property="etiqueta" destination="UKZ-yx-B72" id="WTI-n0-swe"/>
+                            </connections>
+                        </collectionReusableView>
                         <connections>
                             <outlet property="dataSource" destination="Uoi-YS-xE7" id="Wy2-vS-2k0"/>
                             <outlet property="delegate" destination="Uoi-YS-xE7" id="bTO-6a-11W"/>
