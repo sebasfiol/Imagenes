@@ -53,6 +53,7 @@ class CVC: UICollectionViewController {
     @IBAction func buscar(sender: UITextField) {
         let seccion = Seccion(nombre: sender.text!, imagenes: busquedaGoogle(sender.text!))
         imagenes.append(seccion)
+        self.collectionView!.reloadData()
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -61,7 +62,7 @@ class CVC: UICollectionViewController {
         // self.clearsSelectionOnViewWillAppear = false
 
         // Register cell classes
-        self.collectionView!.registerClass(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+        //self.collectionView!.registerClass(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
 
         // Do any additional setup after loading the view.
     }
@@ -85,17 +86,19 @@ class CVC: UICollectionViewController {
 
     override func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return imagenes.count
     }
 
 
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return 0
+        return imagenes[section].imagenes.count
     }
 
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath)
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as! ImgCelda
+        
+        cell.imagen.image = imagenes[indexPath.section].imagenes[indexPath.item]
     
         // Configure the cell
     
